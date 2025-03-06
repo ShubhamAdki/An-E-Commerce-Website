@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	th:replace="~{base::layout(~{::section})}">
+<head>
+<meta charset="ISO-8859-1">
+<title>Admin Dashboard</title>
+</head>
+<body>
+	<section>
+		<div class="container-fluid p-5  padding-top: 25px">
+			<div class="row">
+				<!-- Admin Sidebar (20%) -->
+				<div class="col-md-3">
+					<p class="text-center fs-4">Admin Panel</p>
+					<div class="list-group">
+						<a href="/admin/loadAddProduct" class="list-group-item list-group-item-action bg-info text-light">
+							<h4><i class="fa-solid fa-square-plus"></i> Add Product</h4>
+						</a>
+						<a href="/admin/category" class="list-group-item list-group-item-action bg-info text-light">
+							<h4><i class="fa-solid fa-list"></i> Add Category</h4>
+						</a>
+						<a href="/admin/products" class="list-group-item list-group-item-action bg-info text-light">
+							<h4><i class="fa-solid fa-table-list"></i> View Product</h4>
+						</a>
+						<a href="/admin/orders" class="list-group-item list-group-item-action bg-info text-light">
+							<h4><i class="fa-solid fa-box-open"></i> Orders</h4>
+						</a>
+						<a href="/admin/users?type=1" class="list-group-item list-group-item-action bg-info text-light">
+							<h4><i class="fa-solid fa-circle-user"></i> Users</h4>
+						</a>
+						
+						<a href="/admin/users?type=2" class="list-group-item list-group-item-action bg-info text-light">
+							<h4><i class="fa-solid fa-circle-user"></i> Admins</h4>
+						</a>
+					</div>
+				</div>
+
+				<!-- Main Content Area (80%) -->
+				<div class="col-md-9">
+					<div class="p-4">
+						<h2 class="text-center">Welcome to the Admin Dashboard</h2>
+						<p class="text-center">Manage your store efficiently with the tools provided.</p>
+						
+						<!-- Additional Content Area -->
+						<div class="card">
+							<div class="card-body">
+								<a href="/admin/products" class="list-group-item list-group-item-action">
+							<h4><i class="fa-brands fa-product-hunt"></i> View all Products</h4>
+						</a>
+							</div>
+						</div>
+
+						<!-- Example Cards for Additional Features -->
+						<div class="row mt-4">
+							<div class="col-md-6">
+								<div class="card">
+									<div class="card-body">
+										<a href="/admin/orders?type=2" class="list-group-item list-group-item-action ">
+						 <h4><i class="fa-solid fa-box-open"></i> Recent Orders</h4>
+						</a>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="card">
+									<div class="card-body">
+										<a href="/admin/add-admin" class="list-group-item list-group-item-action">
+							 <h4><i class="fa-solid fa-user-plus"></i> Add New Admin</h4>
+						</a>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</section>
+</body>
+</html>
